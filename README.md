@@ -87,11 +87,11 @@ Have fun!
 ----------------------------------------------------------
 
 -- 
-Alessandro Prest
-CTO
-LogoGrab
-http://www.logograb.com
-
-
-E-mail: alessandro@logograb.com
-Skype:	alessandro.prest
+Alessandro Prest<br>
+CTO<br>
+LogoGrab<br>
+http://www.logograb.com<br>
+<br>
+<br>
+E-mail: alessandro@logograb.com<br>
+Skype:	alessandro.prest<br>
