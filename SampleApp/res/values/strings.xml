@@ -1,0 +1,5 @@
+<resources>
+    <string name="LOGOGRAB_DEVKEY"></string> <!-- TODO: set your devkey here -->
+    <string name="tap_me">Tap me…</string>
+    <string name="to_start">…to start LogoGrab</string>
+</resources>

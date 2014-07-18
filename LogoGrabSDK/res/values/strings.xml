@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">LogoGrab</string>
+    <string name="empty"></string>
+    <string name="add_to_favorite_message">This is for registered users!\nProceed to sign-in?</string>
+    <string name="add_to_favorite_btn_ok">Sure!</string>
+    <string name="add_to_favorite_btn_ko">Maybe later</string>
+    <string name="email_hint">Email</string>
+    <string name="username_hint">Username</string>
+    <string name="pwd_hint">Password</string>
+	<string name="generic_error">Mmm, something didn\'t work as expected</string>
+		<string-array name="no_match_choice">
+        <item>Report Missing Logo</item>
+        <item>How to grab?</item>
+        <item>Cancel</item>
+    </string-array>
+<string name="locationAdded">Yeah! Your location has been added!\nKeep adding correct locations to earn the Watchdog badge!</string>
+<string name="logo_not_found">We couldn\'t find a match!</string>
+<string name="searchBrandHint">Search brand</string>
+<string name="searchLocationHint">Search location</string>
+<string name="no_connection">Unable to reach the server. Please check your connection or try again later.</string> 
+</resources>

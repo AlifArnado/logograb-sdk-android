@@ -1,0 +1,133 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.logograb" >
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    
+    <permission
+        android:name="android.permission.FLASHLIGHT"
+        android:permissionGroup="android.permission-group.HARDWARE_CONTROLS"
+        android:protectionLevel="normal" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="9" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCzPOcCKypLc3EPQ2Em7f4tN9d401ofKvQ" /> <!-- public API key -->
+
+        <activity
+            android:name="com.togocms.togoapp.logograb.LogoGrabMainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.HomeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.GrabActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.FavoritesActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.HistoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.UsersProfileActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.UserActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.TrendsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.ProfileActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.SettingsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.BrandActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.EditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Custom.Transparent" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.CommentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.MapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.SignActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.BadgeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.SearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.TutorialActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.FollowingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.AmbassadorNinjasDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.togocms.togoapp.logograb.AddLocationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

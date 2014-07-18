@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/followingUserRowContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp" >
+
+        <FrameLayout
+            android:id="@+id/followingUserIconFrame"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_gravity="center_horizontal" >
+
+            <ImageView
+                android:id="@+id/followingUserIcon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/gray_bg_action" >
+            </ImageView>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:src="@drawable/com_logograb_mask_user_icon" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/followingContentContainer"
+            android:layout_width="0dip"
+            android:layout_height="0dip" >
+
+            <FrameLayout
+                android:id="@+id/followingContentTitleTextContainer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/followingContentTitleText"
+                    style="@style/commentTitleRow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/followingContentBadgeContainerScrollView"
+            android:layout_width="0dp"
+            android:layout_height="0dp" >
+
+            <HorizontalScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none"
+                android:overScrollMode="never" >
+
+                <LinearLayout
+                    android:id="@+id/followingContentBadgeContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </HorizontalScrollView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/followingIconFrame"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/followingIcon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </ImageView>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_color" />
+
+</RelativeLayout>

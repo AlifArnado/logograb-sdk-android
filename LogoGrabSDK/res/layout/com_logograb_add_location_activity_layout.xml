@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <include layout="@layout/com_logograb_search_bar_layout" />
+
+    <FrameLayout
+        android:id="@+id/addLocationSearchBtnContainer"
+        android:background="@color/red_off"
+        android:layout_width="0dp"
+        android:layout_height="0dp" >
+
+        <TextView
+            android:id="@+id/addLocationSearchBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/addLocationListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/headerSearchBarContainer"
+        android:background="#fff"
+        android:cacheColorHint="#00000000"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent"
+        android:overScrollMode="never" >
+    </ListView>
+
+</RelativeLayout>

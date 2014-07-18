@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/commentItem"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_margin="5dip"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/commentItemIconRightContainer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/commentItemIconFrame"
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:layout_gravity="center_horizontal" >
+
+                <ImageView
+                    android:id="@+id/commentItemIcon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ImageView>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/com_logograb_mask_user_icon" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/commentItemSmileFrame"
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:layout_gravity="center_horizontal" >
+
+                <ImageView
+                    android:id="@+id/commentItemSmileIcon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ImageView>
+            </FrameLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/commentItemContentContainer"
+            android:layout_width="0dip"
+            android:layout_height="0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/commentItemContentTitleText"
+                    style="@style/commentTitleRow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/commentItemContentDescText"
+                    style="@style/commentDescRow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/commentItemRatingsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:id="@+id/commentItemNegativeRatingsTextContainer"
+                android:layout_width="0dip"
+                android:layout_height="0dip" >
+
+                <TextView
+                    android:id="@+id/commentItemNegativeRatingsText"
+                    style="@style/commentRatingsText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical|right" >
+                </TextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/commentItemNegativeRatingsIconContainer"
+                android:layout_width="0dip"
+                android:layout_height="0dip" >
+
+                <ImageView
+                    android:id="@+id/commentItemNegativeRatingsIcon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ImageView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/commentItemPositiveRatingsTextContainer"
+                android:layout_width="0dip"
+                android:layout_height="0dip" >
+
+                <TextView
+                    android:id="@+id/commentItemPositiveRatingsText"
+                    style="@style/commentRatingsText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical|right" >
+                </TextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/commentItemPositiveRatingsIconContainer"
+                android:layout_width="0dip"
+                android:layout_height="0dip" >
+
+                <ImageView
+                    android:id="@+id/commentItemPositiveRatingsIcon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ImageView>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_color" />
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <FrameLayout
+        android:id="@+id/profileUserIconFrame"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_gravity="center_horizontal" >
+
+        <ImageView
+            android:id="@+id/profileUserIcon"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/gray_bg_action" >
+        </ImageView>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/com_logograb_mask_user_icon" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/profileUserPhotoFrame"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/profileUserSmileIcon"
+            style="@style/iconStyleRed"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/profileUserContentContainer"
+        android:layout_width="0dip"
+        android:layout_height="0dip" >
+
+        <TextView
+            android:id="@+id/profileUserContentTitleText"
+            style="@style/profileUserTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/profileUserEditTitleContainer"
+        android:layout_width="0dip"
+        android:layout_height="0dip" >
+
+        <TextView
+            android:id="@+id/profileUserEditTitle"
+            style="@style/profileUserTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" />
+    </FrameLayout>
+    
+    <FrameLayout
+        android:id="@+id/profileUserContentFollowerContainer"
+        android:layout_width="0dip"
+        android:layout_height="0dip" >
+    </FrameLayout>
+
+</RelativeLayout>

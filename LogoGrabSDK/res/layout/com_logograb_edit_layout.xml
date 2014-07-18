@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#88888888"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout
+        android:id="@+id/add_comment_mood_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:id="@+id/add_comment_mood_text_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical" >
+
+                <TextView
+                    android:id="@+id/add_comment_mood_text"
+                    style="@style/addCommentText"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical" >
+                </TextView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/add_comment_mood1_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/add_comment_mood1_icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ImageView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/add_comment_mood2_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/add_comment_mood2_icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ImageView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/add_comment_mood3_container"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/add_comment_mood3_icon"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ImageView>
+            </FrameLayout>
+        </LinearLayout>
+
+        <com.togocms.togoapp.logograb.widget.CustomEditText
+            android:id="@+id/edit_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSend"
+            android:maxLength="256"
+            android:inputType="text" >
+        </com.togocms.togoapp.logograb.widget.CustomEditText>
+    </LinearLayout>
+
+</RelativeLayout>

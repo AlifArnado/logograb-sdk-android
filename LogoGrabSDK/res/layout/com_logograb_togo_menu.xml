@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/togoMenu"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff333333" >
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_centerVertical="true"
+        android:background="#ff666666" >
+
+        <LinearLayout
+            android:id="@+id/menuContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/logoFrame"
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:layout_centerHorizontal="true"
+                android:onClick="toggleMenu" >
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ImageView>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/menuSeparator"
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:background="#66ffffff" >
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/stage"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_centerVertical="true"
+        android:background="#ff666666"
+        android:orientation="vertical" >
+
+       <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="0dip"
+            android:layout_height="0dip" >
+
+            <FrameLayout
+                android:id="@+id/leftBtnFrame"
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:onClick="onLeftBtn" >
+
+                <ImageView
+                    android:id="@+id/leftBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ImageView>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/headerText"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:textColor="#ffffffff" />
+
+            <FrameLayout
+                android:id="@+id/rightBtnFrame"
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:layout_alignParentRight="true"
+                android:onClick="onRightBtn" >
+
+                <TextView
+                    android:id="@+id/rightBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </TextView>
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <include layout="@layout/com_logograb_search_bar_layout" />
+
+        <RelativeLayout
+            android:id="@+id/mainArea"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnGoToGrabContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp" >
+
+        <ImageView
+            android:id="@+id/btnGoToGrab"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#66ffffff"
+        android:clickable="true"
+        android:visibility="visible" >
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+        </ProgressBar>
+    </RelativeLayout>
+
+</RelativeLayout>

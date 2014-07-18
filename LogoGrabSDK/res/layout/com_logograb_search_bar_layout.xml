@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/headerSearchBarContainer"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:background="@color/red_off" >
+
+    <EditText
+        android:id="@+id/headerSearchBar"
+        style="@style/SearchEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/com_logograb_bg_search"
+        android:imeOptions="actionSearch"
+        android:inputType="text" />
+
+</RelativeLayout>

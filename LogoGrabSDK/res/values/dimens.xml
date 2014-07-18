@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="locationDescTextSize">14dip</dimen>
+    <dimen name="locationTitleTextSize">18dip</dimen>
+    <dimen name="tabBarHeigth">55dip</dimen>
+    <dimen name="tutorialPagesHeigth">30dip</dimen>
+    <dimen name="headerTextSize">20dip</dimen>
+    <dimen name="buttonHeight">50dip</dimen>
+    <dimen name="ButtonTextSize">20dip</dimen>
+</resources>

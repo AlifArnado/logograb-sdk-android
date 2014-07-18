@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight" >
+
+    <LinearLayout
+        android:id="@+id/brandItem"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:orientation="horizontal" >
+
+        <FrameLayout
+            android:id="@+id/brandItemIconFrame"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:background="@drawable/com_logograb_bg_icon_logo"
+            android:layout_gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/brandItemIcon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </ImageView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/brandItemContentContainer"
+            android:layout_width="0dip"
+            android:layout_height="0dip" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/brandItemContentTitleText"
+                    style="@style/titleRow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/brandItemContentDescText"
+                    style="@style/descRow"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical" />
+
+                <LinearLayout
+                    android:id="@+id/brandItemContentIconContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/brandItemChevronFrame"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/brandItemChevron"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </ImageView>
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_color" />
+
+</RelativeLayout>

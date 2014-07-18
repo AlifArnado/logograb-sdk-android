@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+        
+    <RelativeLayout
+        android:id="@+id/brandItemFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+        <TextView
+            android:id="@+id/brandItemTitle"
+            style="@style/titleRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/brandItemIconFrame"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="28dp"
+            android:layout_centerHorizontal="true" >
+
+	  	</TextView>  
+	
+        <FrameLayout
+            android:id="@+id/brandItemIconFrame"
+            android:layout_width="0dip"
+            android:layout_height="0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/brandItemIcon"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+            </ImageView>
+        </FrameLayout>
+
+		<TextView
+		    android:id="@+id/brandItemText"
+		    style="@style/titleRow"
+		    android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/brandItemIconFrame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dp" >
+
+	  	</TextView>  
+	</RelativeLayout>
+</RelativeLayout>

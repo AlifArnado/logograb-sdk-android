@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/togoMenu"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff333333" >
+
+    <LinearLayout
+        android:id="@+id/stage"
+        android:layout_width="0dip"
+        android:layout_height="0dip"
+        android:layout_centerVertical="true"
+        android:background="#ff666666"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="0dip"
+            android:layout_height="0dip" >
+
+            <FrameLayout
+                android:id="@+id/backBtnFrame"
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:onClick="goBack" >
+
+                <ImageView
+                    android:id="@+id/backBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </ImageView>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/headerText"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:textColor="#ffffffff" />
+
+            <FrameLayout
+                android:id="@+id/rightBtnFrame"
+                android:layout_width="0dip"
+                android:layout_height="0dip"
+                android:layout_alignParentRight="true"
+                android:onClick="onRightBtn" >
+
+                <TextView
+                    android:id="@+id/rightBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </TextView>
+            </FrameLayout>
+        </RelativeLayout>
+
+ 
+        <RelativeLayout
+            android:id="@+id/mainArea"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" >
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#66ffffff"
+        android:clickable="true"
+        android:visibility="visible" >
+
+        <ProgressBar
+            style="@android:style/Widget.ProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+        </ProgressBar>
+    </RelativeLayout>
+
+</RelativeLayout>

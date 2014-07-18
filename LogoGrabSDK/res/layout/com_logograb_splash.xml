@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffd52850" >
+
+    <FrameLayout
+        android:id="@+id/splashFrame"
+        android:layout_width="0dip"
+        android:layout_height="0dip" >
+
+        <ImageView
+            android:id="@+id/splashBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </ImageView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/splashCircleFrame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true" >
+
+        <com.togocms.togoapp.logograb.CircleTimerView
+            android:id="@+id/splashCircle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+
+</RelativeLayout>
