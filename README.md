@@ -10,7 +10,7 @@ Checkout the LogoGrabSDK in <MY_WORKSPACE> and create your own new android proje
 
 STEP 2:
 Import the project library (LogoGrabSDK) into your workspace. In Eclipse this can be done under File/Import…/Existing\ Projects\ into\ Workspace.
-Make sure you update these two project libraries to create their build.xml with your path to the android sdk. This is explained in the official android developer
+Make sure you update this libraries to create their build.xml with your path to the android sdk. This is explained in the official android developer
 homepage:
 	http://developer.android.com/tools/projects/projects-cmdline.html#UpdatingAProject
 Addtionally import the google-play-service project library. For more information check out the official android developer homepage at:
@@ -21,6 +21,7 @@ Make sure, that the library project LogoGrabSDK has the reference of the library
 <ul>
 <li>Right-click LogoGrabSDK library project and click Properties<br>
 <li>Under Android / Library just add the google-play-services_lib
+<li>Under Android / Library also tick “is Library”
 </ul>
 Your project should then also reference the project library LogoGrabSDK.
 

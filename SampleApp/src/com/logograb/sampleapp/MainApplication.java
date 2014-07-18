@@ -18,7 +18,7 @@ public class MainApplication extends LogoGrabApp {
 		// set LogoGrab Constants
 		LogoGrabInit.setDEVKEY(getString(R.string.LOGOGRAB_DEVKEY));
 		LogoGrabInit.setShowCloseButton(true);
-		LogoGrabInit.setShowLogoGrabLandingPage(false);
+		LogoGrabInit.setShowLogoGrabLandingPage(true);
 		LogoGrabInit.setShowAdditionalFeatures(false);
 		LogoGrabInit.setStartAtHomeFeed(false);
 		
