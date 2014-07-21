@@ -1,5 +1,7 @@
 package com.logograb.app;
 
+import android.app.Activity;
+
 import com.togocms.togoapp.logograb.LogoGrab;
 import com.togocms.togoapp.logograb.LogoGrab.LogoGrabListener;
 
@@ -13,29 +15,22 @@ import com.togocms.togoapp.logograb.LogoGrab.LogoGrabListener;
  * @version 1.0
  * @since 2014-01-14
  */
-public class LogoGrabInit {
+public class LogoGrabInterface {
 	
 	/**
 	 * Private Constructor to suppress default constructor for noninstantiability.
 	 */
-	private LogoGrabInit() {
+	private LogoGrabInterface() {
 		// insurance
 		throw new AssertionError();
-	}
-	
-	/**
-	 * The developer key is a key string to distinguish between different developer,
-	 * which modified the LogoGrab application to their use, but still using the LogoGrab server to
-	 * use the logo recognition algorithm provided by the LogoGrab server.
-	 */
-	public static void setDEVKEY(String _DEVKEY) {
-		LogoGrab._DEVKEY = _DEVKEY;
 	}
 	
 	/**
 	 * If <b>true:</b> the default logograb landing page is shown when grabing a logo.<br>
 	 * If <b>false:</b> you can customize the behavior by responding to the logograb listener "LogoGrabListener"./<br>
 	 * By <b>default:</b> false.
+	 * 
+	 * @param show The boolean
 	 */
 	public static void setShowLogoGrabLandingPage(boolean show) {
 		LogoGrab.SHOW_LOGOGRAB_LANDING_PAGE = show;
@@ -45,6 +40,8 @@ public class LogoGrabInit {
 	 * If <b>true:</b> additional features can be seen on the side bar.<br>
 	 * If <b>false:</b> the SDK doesn't show any additional/social features on the left side bar.<br>
 	 * By <b>default:</b> false.
+	 * 
+	 * @param show The boolean
 	 */
 	public static void setShowAdditionalFeatures(boolean show) {
 		LogoGrab.SHOW_ADDITIONAL_FEATURES = show;
@@ -54,6 +51,8 @@ public class LogoGrabInit {
 	 * If <b>true:</b> show the close button in the upper left corner.<br>
 	 * If <b>false:</b> do not show the close button in the upper left corner.<br>
 	 * By <b>default:</b> true.
+	 * 
+	 * @param show The boolean
 	 */
 	public static void setShowCloseButton(boolean show) {
 		LogoGrab.SHOW_CLOSE_BUTTON = show;
@@ -65,15 +64,47 @@ public class LogoGrabInit {
 	 * By <b>default:</b> false.<br>
 	 * Additional note: When <code>setShowAdditionalFeatures</code> is set to false,
 	 * the application ALWAYS starts at the scanner, since the homefeed is disabled (additional feature).
+	 * 
+	 * @param startAtHomeFeed The boolean
 	 */
 	public static void setStartAtHomeFeed(boolean startAtHomeFeed) {
 		LogoGrab.START_AT_HOME_FEED = startAtHomeFeed;
 	}
 	
 	/**
-	 * Sets the LogoGrab listener, to listen to the response given by the LogoGrab Server.
+	 * Starts the LogoGrab Activity. Sets also the LogoGrab listener, to listen to the response given by the LogoGrab Server.
+	 * This Listener listens to the responses of the LogoGrab Server. Provide <b>null</b> if you don't care.<br>
+	 * It implements the abstract method:
+	 * <ul>
+	 * <li>onResponse
+	 * </ul>
+	 * <b>onResponse(JSONObject response):</b><br>
+	 * The response from the LogoGrab Server after a successful grab. This method gets invoked twice
+	 * after a successful grab. First, to give some brief information about the grabbed Logo:
+	 * <ul>
+	 * <li>"<b>session_id</b>": The session ID
+	 * <li>"<b>confidence</b>": confidence score of the detection
+	 * <li>"<b>image_type</b>": The image type (= 0, not used at the moment)
+	 * <li>"<b>logo_version_id</b>": The Logo version ID
+	 * </ul>
+	 * <br>
+	 * The second invocation is a detailed JSONObject about the grabbed Logo:
+	 * <ul>
+	 * <li>"<b>icon_url</b>": The URL to the Icon image of the Logo
+	 * <li>"<b>share_url</b>": The LogoGrab Logo Content page
+	 * <li>"<b>description</b>": The description of the Logo
+	 * <li>"<b>name</b>": The name of the Logo
+	 * </ul>
+	 * <br>
+	 * NOTE: Some JSONObject fields might not always be available.
+	 * <br>
+	 * 
+	 * @param caller The Activity from where this method was called
+	 * @param logoGrabListener The LogoGrab listener
 	 */
-	public static void setLogoGrabListener(LogoGrabListener logoGrabListener) {
-		LogoGrab.LOGOGRAB_LISTENER = logoGrabListener;
+	public static <T extends Activity> void startLogoGrab(T caller, LogoGrabListener logoGrabListener) {
+		if (logoGrabListener != null)
+			LogoGrab.LOGOGRAB_LISTENER = logoGrabListener;
+		LogoGrab.startLogoGrab(caller);
 	}
 }
