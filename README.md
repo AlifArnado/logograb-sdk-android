@@ -80,7 +80,7 @@ You have total freedom to integrate the LogoGrab functionality inside your own a
 
 In your own custom app, you might find useful to access the identity of a logo given the ID returned by our SDK upon successful scanning. For this purpose please refer to the web function:<br>
 <code>
-http://logograb.com/api/getLogoVersions.json?developerKey=&lt;CYOUR_SDK_ACCESS_KEY&gt;
+http://logograb.com/api/getLogoVersions.json?developerKey= &lt;CYOUR_SDK_ACCESS_KEY&gt;
 </code><br>
 The function returns a JSON-formatted list of the "logo_version_id" of the logos present on the platform and their name.
 
