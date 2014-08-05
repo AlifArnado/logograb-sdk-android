@@ -60,7 +60,7 @@ Create the class "MainApplication.java" under &lt;MY_PACKAGE&gt;, which should i
 STEP 8:
 Create the class "MainActivity.java" under &lt;MY_PACKAGE&gt;. You need to assign your SDK Developer Key to the LogoGrabSDK. This can easily be done in the activity file you just created by giving the String to the LogoGrabInterface:
 <br><code>
-LogoGrabInterface.setDevKey("&gt;YOUR DEVELOPER KEY&lt;");
+LogoGrabInterface.setDevKey(“&lt;YOUR DEVELOPER KEY&gt;");
 </code><br>
 To Start the LogoGrab Application simply call the LogoGrabMainActivity from your project:
 <br><code>
@@ -78,7 +78,7 @@ CREATING YOUR CUSTOM LOGOGRAB-ENABLED APP
 
 You have total freedom to integrate the LogoGrab functionality inside your own app. Just remember, it is mandatory for the users of your app to tap on the official LogoGrab icon to launch the SDK.
 
-In your own custom app, you might find useful to access the identity of a logo given the ID returned by our SDK upon successful scanning. For this purpose please refer to the web function: http://logograb.com/api/getLogoVersions.json?developerKey=&gt;YOUR_SDK_ACCESS_KEY&lt;<br>
+In your own custom app, you might find useful to access the identity of a logo given the ID returned by our SDK upon successful scanning. For this purpose please refer to the web function: http://logograb.com/api/getLogoVersions.json?developerKey=&#8249;YOUR_SDK_ACCESS_KEY&#8250;<br>
 The function returns a JSON-formatted list of the "logo_version_id" of the logos present on the platform and their name.
 
 Need to upload missing logos on the LogoGrab platform? You can do so at www.logograb.com/upload
