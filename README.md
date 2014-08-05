@@ -78,7 +78,7 @@ CREATING YOUR CUSTOM LOGOGRAB-ENABLED APP
 
 You have total freedom to integrate the LogoGrab functionality inside your own app. Just remember, it is mandatory for the users of your app to tap on the official LogoGrab icon to launch the SDK.
 
-In your own custom app, you might find useful to access the identity of a logo given the ID returned by our SDK upon successful scanning. For this purpose please refer to the web function: http://logograb.com/api/getLogoVersions.json?developerKey=&#8249;YOUR_SDK_ACCESS_KEY&#8250;<br>
+In your own custom app, you might find useful to access the identity of a logo given the ID returned by our SDK upon successful scanning. For this purpose please refer to the web function: http://logograb.com/api/getLogoVersions.json?developerKey=%3COUR_SDK_ACCESS_KEY%3E<br>
 The function returns a JSON-formatted list of the "logo_version_id" of the logos present on the platform and their name.
 
 Need to upload missing logos on the LogoGrab platform? You can do so at www.logograb.com/upload
