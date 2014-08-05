@@ -18,6 +18,7 @@ public class MainActivity extends Activity {
 	public static final String TAG = "LogoGrabSample";
 	public Button logoGrabButton;
 	public LogoGrabListener logoGrabListener;
+	public OnClickListener onClickListener;
 	
 
 	@Override
@@ -44,13 +45,7 @@ public class MainActivity extends Activity {
 		super.onDestroy();
 	}
 	
-	public void init() {
-		// init LogoGrabInterface parameters
-		LogoGrabInterface.setShowCloseButton(true);
-		LogoGrabInterface.setShowLogoGrabLandingPage(true);
-		LogoGrabInterface.setShowAdditionalFeatures(false);
-		LogoGrabInterface.setStartAtHomeFeed(false);
-		
+	public void initListeners() {
 		// init Listener of LogoGrab application
 		logoGrabListener = new LogoGrabListener() {
 			
@@ -60,14 +55,35 @@ public class MainActivity extends Activity {
 			}
 		};
 		
-		// init Button
-		logoGrabButton = (Button) findViewById(R.id.LogoGrabButton);
-		logoGrabButton.setOnClickListener(new OnClickListener() {
+		// set LogoGrabListener
+		LogoGrabInterface.setLogoGrabListener(logoGrabListener);
+		
+		
+		// init OnClickListener
+		onClickListener = new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				LogoGrabInterface.startLogoGrab(MainActivity.this, logoGrabListener);
+				LogoGrabInterface.startLogoGrab(MainActivity.this);
 			}
-		});
+		};
+		
+		// set OnClickListener
+		logoGrabButton.setOnClickListener(onClickListener);
+	}
+	
+	public void init() {
+		// init LogoGrabInterface parameters
+		LogoGrabInterface.setDevKey(getString(R.string.LOGOGRAB_DEVKEY));
+		LogoGrabInterface.setShowCloseButton(true);
+		LogoGrabInterface.setShowLogoGrabLandingPage(true);
+		LogoGrabInterface.setShowAdditionalFeatures(false);
+		LogoGrabInterface.setStartAtHomeFeed(false);
+		
+		// init Button
+		logoGrabButton = (Button) findViewById(R.id.LogoGrabButton);
+		
+		// registers Listeners
+		initListeners();
 	}
 }

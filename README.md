@@ -13,7 +13,7 @@ Import the project library (LogoGrabSDK) into your workspace. In Eclipse this ca
 Make sure you update this libraries to create their build.xml with your path to the android sdk. This is explained in the official android developer
 homepage:
 	http://developer.android.com/tools/projects/projects-cmdline.html#UpdatingAProject
-Addtionally import the google-play-service project library. For more information check out the official android developer homepage at:
+Additionally import the google-play-service project library. For more information check out the official android developer homepage at:
 	http://developer.android.com/google/play-services/setup.html
 
 STEP 3:
@@ -55,16 +55,13 @@ STEP 6:
 Move the assets/fonts folder to the assets/ folder of your project, to be able to see all LogoGrab fonts used by the SDK.
 
 STEP 7:
-Create the class "MainApplication.java" under <MY_PACKAGE>, which should inherrit "LogoGrabApplication". If you also have your own application file, just complete this class with your own desires. There is an example application file in LogoGrab\ Sample project to get some inspiration.
+Create the class "MainApplication.java" under <MY_PACKAGE>, which should inherit "LogoGrabApplication". If you also have your own application file, just complete this class with your own desires. There is an example application file in LogoGrab\ Sample project to get some inspiration.
 
 STEP 8:
-You need to assign your SDK Developer Key to the LogoGrabSDK. This can easily be done in the application file you just created in step 7 by giving the String to the inherited method:
-	super.initLogoGrabServer("<YOUR DEVELOPER KEY>");
-Please consider again the LogoGrab\ Sample project.
-
-STEP 9:
-Create the class "MainActivity.java" under <MY_PACKAGE>. Simply call the LogoGrabMainActivity to start the LogoGrab Application from your project:
-	LogoGrabInterface.startLogoGrab(MainActivity.this, null);
+Create the class "MainActivity.java" under <MY_PACKAGE>. You need to assign your SDK Developer Key to the LogoGrabSDK. This can easily be done in the activity file you just created by giving the String to the LogoGrabInterface:
+	LogoGrabInterface.setDevKey(“<YOUR DEVELOPER KEY>");
+To Start the LogoGrab Application simply call the LogoGrabMainActivity from your project:
+	LogoGrabInterface.startLogoGrab(MainActivity.this);
 Also see the MainActivity.java file inside the LogoGrab\ SampleApp application for illustration (also how to provide a listener to the LogoGrab Application).
 
 ----------------------------------------------------------

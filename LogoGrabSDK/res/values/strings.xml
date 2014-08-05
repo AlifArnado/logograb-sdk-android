@@ -1,5 +1,4 @@
 <resources>
-
     <string name="app_name">LogoGrab</string>
     <string name="empty"></string>
     <string name="add_to_favorite_message">This is for registered users!\nProceed to sign-in?</string>
@@ -17,6 +16,8 @@
 	<string name="locationAdded">Yeah! Your location has been added!\nKeep adding correct locations to earn the Watchdog badge!</string>
 	<string name="logo_not_found">We couldn\'t find a match!</string>
 	<string name="searchBrandHint">Search brand</string>
-	<string name="searchLocationHint">Search location</string>
+	<string name="searchLocationHint">Add missing location</string>
 	<string name="no_connection">Unable to reach the server. Please check your connection or try again later.</string> 
+	<string name="logo_mismatch">Logo mismatch</string>
+	<string name="claim_logo">To claim your logo visit\nwww.logograb.com/claim and\nuse report id %1$d</string>
 </resources>

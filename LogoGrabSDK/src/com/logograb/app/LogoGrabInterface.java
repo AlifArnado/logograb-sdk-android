@@ -7,9 +7,9 @@ import com.togocms.togoapp.logograb.LogoGrab.LogoGrabListener;
 
 
 /**
- * LogoGrabInit
+ * LogoGrabInterface
  * <p>
- * LogoGrab initializing Class
+ * Interface to the LogoGrab application.
  * 
  * @author Jo&euml;l Smely
  * @version 1.0
@@ -26,8 +26,17 @@ public class LogoGrabInterface {
 	}
 	
 	/**
-	 * If <b>true:</b> the default logograb landing page is shown when grabing a logo.<br>
-	 * If <b>false:</b> you can customize the behavior by responding to the logograb listener "LogoGrabListener"./<br>
+	 * Sets the devkey of the application.
+	 * 
+	 * @param devkey The devkey
+	 */
+	public static void setDevKey(String devkey) {
+		LogoGrab.DEVKEY = devkey;
+	}
+	
+	/**
+	 * If <b>true:</b> the default LogoGrab landing page is shown when grabbing a Logo.<br>
+	 * If <b>false:</b> you can customize the behavior by responding to the LogoGrab listener "LogoGrabListener".<br>
 	 * By <b>default:</b> false.
 	 * 
 	 * @param show The boolean
@@ -59,16 +68,59 @@ public class LogoGrabInterface {
 	}
 	
 	/**
-	 * If <b>true:</b> the LogoGrab application starts at the homefeed instead of the scanner.<br>
+	 * If <b>true:</b> the LogoGrab application starts at the home feed instead of the scanner.<br>
 	 * If <b>false:</b> the LogoGrab application starts at the scanner.<br>
 	 * By <b>default:</b> false.<br>
 	 * Additional note: When <code>setShowAdditionalFeatures</code> is set to false,
-	 * the application ALWAYS starts at the scanner, since the homefeed is disabled (additional feature).
+	 * the application ALWAYS starts at the scanner, since the home feed is disabled (additional feature).
 	 * 
 	 * @param startAtHomeFeed The boolean
 	 */
 	public static void setStartAtHomeFeed(boolean startAtHomeFeed) {
 		LogoGrab.START_AT_HOME_FEED = startAtHomeFeed;
+	}
+	
+	/**
+	 * Starts the LogoGrab Activity.
+	 * 
+	 * @param caller The Activity from where this method was called
+	 */
+	public static <T extends Activity> void startLogoGrab(T caller) {
+		startLogoGrab(caller, null);
+	}
+	
+	/**
+	 * Sets the LogoGrab listener, to listen to the response given by the LogoGrab Server.
+	 * This Listener listens to the responses of the LogoGrab Server.<br>
+	 * It implements the abstract method:
+	 * <ul>
+	 * <li>onResponse
+	 * </ul>
+	 * <b>onResponse(JSONObject response):</b><br>
+	 * The response from the LogoGrab Server after a successful grab. This method gets invoked twice
+	 * after a successful grab. First, to give some brief information about the grabbed Logo:
+	 * <ul>
+	 * <li>"<b>session_id</b>": The session ID
+	 * <li>"<b>confidence</b>": confidence score of the detection
+	 * <li>"<b>image_type</b>": The image type (= 0, not used at the moment)
+	 * <li>"<b>logo_version_id</b>": The Logo version ID
+	 * </ul>
+	 * <br>
+	 * The second invocation is a detailed JSONObject about the grabbed Logo:
+	 * <ul>
+	 * <li>"<b>icon_url</b>": The URL to the Icon image of the Logo
+	 * <li>"<b>share_url</b>": The LogoGrab Logo Content page
+	 * <li>"<b>description</b>": The description of the Logo
+	 * <li>"<b>name</b>": The name of the Logo
+	 * </ul>
+	 * <br>
+	 * NOTE: Some JSONObject fields might not always be available.
+	 * <br>
+	 * 
+	 * @param logoGrabListener The LogoGrab listener
+	 */
+	public static void setLogoGrabListener(LogoGrabListener logoGrabListener) {
+		LogoGrab.LOGOGRAB_LISTENER = logoGrabListener;
 	}
 	
 	/**
