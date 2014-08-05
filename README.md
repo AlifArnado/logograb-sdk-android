@@ -31,6 +31,13 @@ Make sure your project.properties file includes the line:<br>
 This way, you do not need to copy-paste all the activities from the LogoGrabSDK library project.
 
 STEP 5:
+Add the LogoGrab SDK jar (logograb-sdk-&lt;VERSION_NUMBER&gt;), which is located in LogoGrabSDK/libs, to your java build path. For Eclipse user:
+<ul>
+<li>Right-click LogoGrabSDK library project and click Properties<br>
+<li>Under “Java Build Path” click on “Add Jars…”
+</ul>
+
+STEP 6:
 Your Manifest.xml file should include these lines:
 
 	<uses-sdk
@@ -51,13 +58,13 @@ Your Manifest.xml file should include these lines:
 		android:largeHeap="true" >
 	</application>
 
-STEP 6:
+STEP 7:
 Move the assets/fonts folder to the assets/ folder of your project, to be able to see all LogoGrab fonts used by the SDK.
 
-STEP 7:
+STEP 8:
 Create the class "MainApplication.java" under &lt;MY_PACKAGE&gt;, which should inherit "LogoGrabApplication.java". If you also have your own application file, just complete this class with your own desires. There is an example application file in LogoGrab\ Sample project to get some inspiration.
 
-STEP 8:
+STEP 9:
 Create the class "MainActivity.java" under &lt;MY_PACKAGE&gt;. You need to assign your SDK Developer Key to the LogoGrabSDK. This can easily be done in the activity file you just created by giving the String to the LogoGrabInterface:
 <br><code>
 LogoGrabInterface.setDevKey(“&lt;YOUR DEVELOPER KEY&gt;");
@@ -65,12 +72,12 @@ LogoGrabInterface.setDevKey(“&lt;YOUR DEVELOPER KEY&gt;");
 To Start the LogoGrab Application simply call the LogoGrabMainActivity from your project:
 <br><code>
 LogoGrabInterface.startLogoGrab(MainActivity.this);
-<br></code>
+</code><br>
 Also see the MainActivity.java file inside the LogoGrab\ SampleApp application for illustration (also how to provide a listener to the LogoGrab Application).
 
 ----------------------------------------------------------
 
-Once you completed the steps above, you're ready to compile and run SampleApp, your first application based on the LogoGrab SDK.
+Once you completed the steps above, you're ready to compile and run SampleApp, your first application based on the LogoGrab SDK. If you have problems building the SampleApp, try to clean the whole project and the SDK.
 
 ----------------------------------------------------------
 
