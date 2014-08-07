@@ -77,7 +77,7 @@ Also see the MainActivity.java file inside the LogoGrab\ SampleApp application f
 
 ----------------------------------------------------------
 
-Once you completed the steps above, you're ready to compile and run SampleApp, your first application based on the LogoGrab SDK. If you have problems building the SampleApp, try to clean the whole project and the SDK.
+Once you completed the steps above, you're ready to compile and run SampleApp, your first application based on the LogoGrab SDK. If you have problems building the SampleApp, try to <b>clean the whole project and the SDK<b>.
 
 ----------------------------------------------------------
 
