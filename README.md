@@ -6,7 +6,7 @@ GETTING STARTED WITH THE LOGOGRAB SDK
 We guide you through all the steps needed to get started with your own application that uses the LogoGrab SDK:
 
 STEP 1:
-Checkout the LogoGrabSDK in &lt;MY_WORKSPACE&gt; and create your own new android project (if not already available) in your desired ADT. &lt;MY_WORKSPACE&gt; will be referred to your workspace throughout this README. Also &lt;MY_PACKAGE&gt; will be referred to your package name of your application.
+Checkout the LogoGrabSDK in [MY_WORKSPACE] and create your own new android project (if not already available) in your desired ADT. [MY_WORKSPACE] will be referred to your workspace throughout this README. Also [MY_PACKAGE] will be referred to your package name of your application.
 
 STEP 2:
 Import the project library (LogoGrabSDK) into your workspace. In Eclipse this can be done under File/Import…/Existing\ Projects\ into\ Workspace.
@@ -31,7 +31,7 @@ Make sure your project.properties file includes the line:<br>
 This way, you do not need to copy-paste all the activities from the LogoGrabSDK library project.
 
 STEP 5:
-Add the LogoGrab SDK jar (logograb-sdk-&lt;VERSION_NUMBER&gt;), which is located in LogoGrabSDK/libs, to your java build path. For Eclipse user:
+Add the LogoGrab SDK jar (logograb-sdk-[VERSION_NUMBER]), which is located in LogoGrabSDK/libs, to your java build path. For Eclipse user:
 <ul>
 <li>Right-click LogoGrabSDK library project and click Properties<br>
 <li>Under “Java Build Path” click on “Add Jars…”
@@ -52,7 +52,7 @@ Your Manifest.xml file should include these lines:
 
 	<!-- the LogoGrab application has a subclass routine, therefore you need also a subclass, more to that later. Obviously, it is your choice how to name this application class, which here is named "MainApplication" -->
 	<application
-		android:name="<MY_PACKAGE>.MainApplication" 
+		android:name="[MY_PACKAGE].MainApplication" 
 		android:allowBackup="true"
 		android:hardwareAccelerated="true"
 		android:largeHeap="true" >
@@ -62,12 +62,12 @@ STEP 7:
 Move the assets/fonts folder to the assets/ folder of your project, to be able to see all LogoGrab fonts used by the SDK.
 
 STEP 8:
-Create the class "MainApplication.java" under &lt;MY_PACKAGE&gt;, which should inherit "LogoGrabApplication.java". If you also have your own application file, just complete this class with your own desires. There is an example application file in LogoGrab\ Sample project to get some inspiration.
+Create the class "MainApplication.java" under [MY_PACKAGE], which should inherit "LogoGrabApplication.java". If you also have your own application file, just complete this class with your own desires. There is an example application file in LogoGrab\ Sample project to get some inspiration.
 
 STEP 9:
-Create the class "MainActivity.java" under &lt;MY_PACKAGE&gt;. You need to assign your SDK Developer Key to the LogoGrabSDK. This can easily be done in the activity file you just created by giving the String to the LogoGrabInterface:
+Create the class "MainActivity.java" under [MY_PACKAGE]. You need to assign your SDK Developer Key to the LogoGrabSDK. This can easily be done in the activity file you just created by giving the String to the LogoGrabInterface:
 <br><code>
-LogoGrabInterface.setDevKey(“&lt;YOUR DEVELOPER KEY&gt;");
+LogoGrabInterface.setDevKey(“[YOUR DEVELOPER KEY]");
 </code><br>
 To Start the LogoGrab Application simply call the LogoGrabMainActivity from your project:
 <br><code>
@@ -85,13 +85,9 @@ CREATING YOUR CUSTOM LOGOGRAB-ENABLED APP
 
 You have total freedom to integrate the LogoGrab functionality inside your own app. Just remember, it is mandatory for the users of your app to tap on the official LogoGrab icon to launch the SDK.
 
-In your own custom app, you might find useful to access the identity of a logo given the ID returned by our SDK upon successful scanning. For this purpose please refer to the web function:
-<br>
-http://logograb.com/api/getLogoVersions.json?developerKey= &lt;YOUR_SDK_ACCESS_KEY&gt;
-<br>
-The function returns a JSON-formatted list of the "logo_version_id" of the logos present on the platform and their name.
+In your own custom app, you might find useful to access the identity of a logo given the ID returned by our SDK upon successful scanning. For this purpose you can use: http://logograb.com/api/getBrand.json?logoVersionId=[LOGO_VERSION_ID]&developerKey=[YOUR_DEVKEY]
 
-Need to upload missing logos on the LogoGrab platform? You can do so at www.logograb.com/upload
+Need to upload missing logos on the LogoGrab platform? You can do so at http://logograb.com/upload
 
 Have fun!
 
