@@ -53,6 +53,11 @@ public class MainActivity extends Activity {
 			public void onResponse(JSONObject response) {
 				Log.i(TAG, "LogoGrab Application responded with: " + response.toString());
 			}
+			
+			@Override
+			public void onError(String error) {
+				Log.e(TAG, error);
+			}
 		};
 		
 		// set LogoGrabListener
