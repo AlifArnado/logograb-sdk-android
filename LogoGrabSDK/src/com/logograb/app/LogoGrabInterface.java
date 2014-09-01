@@ -159,4 +159,11 @@ public class LogoGrabInterface {
 			LogoGrab.LOGOGRAB_LISTENER = logoGrabListener;
 		LogoGrab.startLogoGrab(caller);
 	}
+	
+	/**
+	 * Ends the LogoGrab application
+	 */
+	public static void stopLogoGrab() {
+		LogoGrab.stopLogoGrab();
+	}
 }
